@@ -44,4 +44,30 @@ public class Customer : User
 
     }
 
+    public static void ShowCustomersWithMoreThanThirtyYearsOld()
+    {
+        Console.WriteLine("=========================================================================");
+        Console.WriteLine("                       Lista de Clientes Mayores de 30 años                     ");
+        Console.WriteLine("=========================================================================");
+        foreach (var customer in customers.Where(c => c.BirthDate.AddYears(30) < DateOnly.FromDateTime(DateTime.Now) ))
+        {
+            Console.WriteLine($"ID: {customer.Id}");
+            Console.WriteLine($"Nombre: {customer.Name}");
+            Console.WriteLine($"Apellido: {customer.LastName}");
+            Console.WriteLine($"Tipo de Documento: {customer.TypeDocument}");
+            Console.WriteLine($"Numero de Identificacion: {customer.IdentificationNumber}");
+            Console.WriteLine($"Fecha de Nacimiento: {customer.BirthDate}");
+            Console.WriteLine($"Email: {customer.Email}");
+            Console.WriteLine($"Numero de telefono: {customer.PhoneNumber}");
+            Console.WriteLine($"Direccion: {customer.Adreess}");
+            Console.WriteLine($"Membresia: {customer.MembershipLevel}");
+            Console.WriteLine($"Preferencias de pago: {customer.PreferredPaymentMethod}");
+            customer.ShowAge();
+            Console.WriteLine("------------------------------------------------------------------------");
+            Thread.Sleep(400);
+        }
+        Console.WriteLine("=========================================================================");
+        Thread.Sleep(5000);
+    }
+
 }
