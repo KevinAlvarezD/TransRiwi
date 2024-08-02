@@ -13,7 +13,7 @@ public static class Administrador
         while (true)
         {
             Console.Clear();
-            Console.WriteLine("============================================");
+            Console.WriteLine("===============================================");
             Console.WriteLine("                 ADMINISTRADOR                 ");
             Console.WriteLine("===============================================");
             Console.WriteLine("| 1. Mostrar Detalles de Usuario               |");
@@ -24,7 +24,8 @@ public static class Administrador
             Console.WriteLine("| 6. Mostrar todos los clientes                |"); 
             Console.WriteLine("| 7. Clientes mayores de 30                    |");
             Console.WriteLine("| 8. Conductores ordenados de forma descendente|");
-            Console.WriteLine("| 9. Salir                                     |");
+            Console.WriteLine("| 9. Clientes que paga con tarjeta de credito  |");
+            Console.WriteLine("| 10. Salir                                     |");
             Console.WriteLine("================================================");
             Console.Write("Ingrese una opcion: ");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -53,9 +54,11 @@ public static class Administrador
                      break;
                 case 8:
                 Driver.ShowDetailsOrderDescending();
-                
-                     break;   
+                     break;  
                 case 9:
+                Customer.GetCustomersWithCreditCardPayment();
+                break;      
+                case 10:
                      Console.WriteLine("Gracias por usar nuestro sistema. Adiós...");
                      Thread.Sleep(3000);
                      Environment.Exit(0);
