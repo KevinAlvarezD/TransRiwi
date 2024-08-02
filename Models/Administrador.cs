@@ -20,11 +20,8 @@ public static class Administrador
             Console.WriteLine("| 2. Añadir Experiencia                     |");
             Console.WriteLine("| 3. Actualizar Categoria de la Licencia    |");
             Console.WriteLine("| 4. Actualizar Membresia                   |");
-            Console.WriteLine("| 5. Calcular Edad de un Cliente            |");
-            Console.WriteLine("| 6. Mostrar Experiencia                     |");
-            Console.WriteLine("| 7. Mostrar Experiencia                     |");
-            Console.WriteLine("| 8. Salir                                  |");
-            Console.WriteLine("| 9. Salir                                  |");
+            Console.WriteLine("| 5. Eliminar un vehiculo                   |"); 
+            Console.WriteLine("| 6. Salir                                  |");
             Console.WriteLine("============================================");
             Console.Write("Ingrese una opcion: ");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -43,18 +40,13 @@ public static class Administrador
                 Customer.UpdateMembershipLevel();
                     break;
                 case 5:
-                /* Customer.CalculateAge(); */
-
+                Vehicle.DeleteVehicle();
                      break;
                 case 6:
-
-                     break;    
-                case 7:
-
+                     Console.WriteLine("Gracias por usar nuestro sistema. Adiós...");
+                     Thread.Sleep(3000);
+                     Environment.Exit(0);
                      break;
-                case 8:
-
-                     break;  
                 default:
                  Console.WriteLine("Opcion invalida. Presione cualquier tecla para continuar...");
                  Console.ReadKey();

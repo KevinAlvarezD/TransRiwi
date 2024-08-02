@@ -101,9 +101,21 @@ public class Vehicle
     }
 
     //metodos
-    public void DeleteVehicle(int id){ 
-        Vehicles.RemoveAll(v => v.Id == id);
-        Thread.Sleep(4000);
-        Console.WriteLine($"El vehiculo con id {id} ha sido eliminado");
-    }
+    public static void DeleteVehicle(){
+        //pedir al usuario el vehiculo que quiere eliminar
+        Console.WriteLine("Ingrese la placa del vehículo que desea eliminar:");
+        var placaToDelete = Console.ReadLine();
+        //busca el vehiculo en la lista y lo elimina
+        var vehicleToDelete = Vehicles.FirstOrDefault(v => v.Placa == placaToDelete);
+        if (vehicleToDelete!= null)
+        {
+            Vehicles.Remove(vehicleToDelete);
+            Console.WriteLine($"El vehículo con placa {vehicleToDelete.Placa} ha sido eliminado correctamente.");
+        }
+        else
+        {
+            Console.WriteLine("No se encontró el vehículo con la placa ingresada.");
+        }
+     }
+      
 }
