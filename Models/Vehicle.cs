@@ -103,9 +103,9 @@ public class Vehicle
     //metodos
     public void DeleteVehicle(int id){
         
-       /*  Vehicles.RemoveAll(v => v.Id == id);
+        Vehicles.RemoveAll(v => v.Id == id);
         Thread.Sleep(4000);
-        Console.WriteLine($"El vehiculo con id {id} ha sido eliminado"); */
+        Console.WriteLine($"El vehiculo con id {id} ha sido eliminado");
     }
 
 
