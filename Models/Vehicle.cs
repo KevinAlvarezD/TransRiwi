@@ -43,7 +43,7 @@ public class Vehicle
       "9012345678", 
       "GHIJKLMNOPQ",
        3, 
-      new Driver("Maria", "Martinez", "CC", "9012345678", new DateOnly(1993, 11, 20), "martinez@example.com", "9012345678", "Calle 879 #548, Esmeraldas", "31548476154", "b2", 5)),
+      new Driver("Maria", "Martinez", "CC", "9012345678", new DateOnly(1993, 11, 20), "martinez@example.com", "9012345678", "Calle 879 #548, Esmeraldas", "31548476154", "B2", 5)),
       new Vehicle(5,
       "MNO012",
       "Motocicleta", 
@@ -101,12 +101,9 @@ public class Vehicle
     }
 
     //metodos
-    public void DeleteVehicle(int id){
-        
+    public void DeleteVehicle(int id){ 
         Vehicles.RemoveAll(v => v.Id == id);
         Thread.Sleep(4000);
         Console.WriteLine($"El vehiculo con id {id} ha sido eliminado");
     }
-
-
 }
