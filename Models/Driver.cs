@@ -19,4 +19,8 @@ public class Driver : User
         DrivingExperience = drivingExperience;
     }
 
+    //metodos
+    //UpdateLicenseCategory(string newCategory) void
+    //AddExperience(int years)void
+
 }
