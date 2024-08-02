@@ -7,6 +7,7 @@ namespace TransRiwi.Models;
 
 public static class Administrador
 {
+   
     public static void Menu()
     {
         while (true)
@@ -15,20 +16,20 @@ public static class Administrador
             Console.WriteLine("============================================");
             Console.WriteLine("                 ADMINISTRADOR                ");
             Console.WriteLine("============================================");
-            Console.WriteLine("| 1. Gestionar Vehiculos                     |");
-            Console.WriteLine("| 2. Gestionar Conductores                  |");
+            Console.WriteLine("| 1. Mostrar Detalles de Usuario            |");
+            Console.WriteLine("| 2. Añadir Experiencia                     |");
             Console.WriteLine("| 3. Gestionar Clientes                     |");
             Console.WriteLine("| 4. Salir                                  |");
             Console.WriteLine("============================================");
             Console.Write("Ingrese una opcion: ");
             int option = Convert.ToInt32(Console.ReadLine());
-
             switch (option)
             {
-                case 1:
-                    
+                case 1: 
+                Driver.ShowDetails();                        
                     break;
                 case 2:
+                
                     
                     break;
                 case 3:

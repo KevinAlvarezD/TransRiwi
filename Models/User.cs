@@ -18,7 +18,7 @@ public class User
     protected string Adreess { get; set; }
 
     //constructor
-    protected User(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string adreess)
+    public User(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string adreess)
     {
         Id = Guid.NewGuid();
         Name = name;
@@ -32,7 +32,8 @@ public class User
     }
     //metodos
     //showDetails()void
-    public virtual void ShowDetails()
+    //hacer metodo static para mostrar informacion personal
+    public  void ShowDetails()
     {
          Console.WriteLine("==============================================================================");
             Console.WriteLine("                          INFORMACION PERSONAL                             ");
@@ -51,7 +52,7 @@ public class User
 
 
     //CalculateAge()int
-    public  int CalculateAge()
+    public int CalculateAge()
     {
         int age = DateTime.Today.Year - BirthDate.Year;
         int month = DateTime.Today.Month - BirthDate.Month;
@@ -64,7 +65,7 @@ public class User
 
 
     //ShowAge()void
-    public  void ShowAge()
+    public void ShowAge()
     {
         int age = CalculateAge();
         Console.WriteLine("============================================================================");

@@ -31,15 +31,6 @@ public class Customer : User
     //metodos
 
     //Actualizar MemberShiplevel
-    public  void UpdateMembershipLevel(string newLevel){
-
-        if (newLevel == "Silver" || newLevel == "Gold" || newLevel == "Platinum")
-        {
-            Console.WriteLine("El nivel de membresia es valido");
-        }
-        MembershipLevel = newLevel;
-        Thread.Sleep(4000);
-        Console.WriteLine($"El nivel de membresia ha sido actualizado a {newLevel}");
-    }
+    public static void UpdateMembershipLevel(string newLevel){}
 
 }
