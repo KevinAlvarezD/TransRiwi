@@ -98,7 +98,7 @@ public class Customer : User
 
     //encontrar todos los clientes que quieren pagar con tarjeta de credito
     public static void GetCustomersWithCreditCardPayment(){
-        foreach(var customer in customers.Where(c => c.PreferredPaymentMethod == "Tarjeta de Credito").ToList())
+        foreach(var customer in customers.Where(c => c.PreferredPaymentMethod == "Tarjeta de Credito"))
         {
             Console.WriteLine($"ID: {customer.Id}");
             Console.WriteLine($"Nombre: {customer.Name}");

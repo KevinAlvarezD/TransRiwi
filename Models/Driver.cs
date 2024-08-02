@@ -128,4 +128,28 @@ public class Driver : User
       }
     }
 
+    public static void ListLicenseCategoryA2()
+    {
+        Console.WriteLine("Conductores con categoría de licencia A2:");
+        foreach (var driver in drivers.Where(d => d.LicenseCategory == "A2"))
+        {
+          Console.WriteLine("| {0,-1} | {1,-43} |", "ID                   |", $"{driver.Id}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Nombre               |", $"{driver.Name}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Apellido             |", $"{driver.LastName}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Tipo De Documento    |", $"{driver.TypeDocument}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Numero de Documento  |", $"{driver.IdentificationNumber}");   
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Cumpleaños           |", $"{driver.BirthDate.ToString("dd/MM/yyyy")}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Email                |", $"{driver.Email}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Telefono             |", $"{driver.PhoneNumber}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Direccion            |", $"{driver.Adreess}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Nº Licensia          |", $"{driver.LicenseNumber}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Categoría de Licencia |", $"{driver.LicenseCategory}");
+          Console.WriteLine("| {0,-1} | {1,-43} |", "Experiencia en Conducir |", $"{driver.DrivingExperience} años");
+          driver.ShowAge();
+          Console.WriteLine("============================================================================");
+          Thread.Sleep(3000);
+            
+        }
+    }
+
 }
