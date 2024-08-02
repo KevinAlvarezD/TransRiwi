@@ -29,8 +29,19 @@ public class Customer : User
     }
 
     //metodos
+    public static void UpdateMembershipLevel(){
+        Console.WriteLine("Ingrese el nombre del cliente para actualizar su nivel de membresía: ");
+        string customerName = Console.ReadLine();
+        var customer = customers.FirstOrDefault(c => c.Name.ToLower() == customerName.ToLower());
+        if (customer!= null)
+        {
+            Console.WriteLine("Ingrese el nuevo nivel de membresía: ");
+            string newMembershipLevel = Console.ReadLine();
+            customer.MembershipLevel = newMembershipLevel;
+            Console.WriteLine($"El nivel de membresía de {customer.Name} ha sido actualizado a {newMembershipLevel}");
+        }
+        Thread.Sleep(4000);
 
-    //Actualizar MemberShiplevel
-    public static void UpdateMembershipLevel(string newLevel){}
+    }
 
 }

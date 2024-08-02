@@ -19,7 +19,7 @@ public static class Administrador
             Console.WriteLine("| 1. Mostrar Detalles de Usuario            |");
             Console.WriteLine("| 2. Añadir Experiencia                     |");
             Console.WriteLine("| 3. Actualizar Categoria de la Licencia    |");
-            Console.WriteLine("| 4. Mostrar Experiencia                     |");
+            Console.WriteLine("| 4. Actualizar Membresia                   |");
             Console.WriteLine("| 5. Mostrar Experiencia                     |");
             Console.WriteLine("| 6. Mostrar Experiencia                     |");
             Console.WriteLine("| 7. Mostrar Experiencia                     |");
@@ -40,7 +40,7 @@ public static class Administrador
                 Driver.UpdateLicenseCategory();
                     break;
                 case 4:
-                   
+                Customer.UpdateMembershipLevel();
                     break;
                 case 5:
 
