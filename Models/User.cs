@@ -46,6 +46,7 @@ public class User
             Console.WriteLine("| {0,-1} | {1,-43} |", "Email                |",$"{Email}");
             Console.WriteLine("| {0,-1} | {1,-43} |", "Telefono             |",$"{PhoneNumber}");
             Console.WriteLine("| {0,-1} | {1,-43} |", "Direccion            |",$"{Adreess}");
+            Console.WriteLine("============================================================================");
     }
 
 
