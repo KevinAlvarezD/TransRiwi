@@ -20,7 +20,7 @@ public static class Administrador
             Console.WriteLine("| 2. Añadir Experiencia                     |");
             Console.WriteLine("| 3. Actualizar Categoria de la Licencia    |");
             Console.WriteLine("| 4. Actualizar Membresia                   |");
-            Console.WriteLine("| 5. Mostrar Experiencia                     |");
+            Console.WriteLine("| 5. Calcular Edad de un Cliente            |");
             Console.WriteLine("| 6. Mostrar Experiencia                     |");
             Console.WriteLine("| 7. Mostrar Experiencia                     |");
             Console.WriteLine("| 8. Salir                                  |");
@@ -43,6 +43,7 @@ public static class Administrador
                 Customer.UpdateMembershipLevel();
                     break;
                 case 5:
+                /* Customer.CalculateAge(); */
 
                      break;
                 case 6:

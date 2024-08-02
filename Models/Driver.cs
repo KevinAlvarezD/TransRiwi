@@ -95,6 +95,7 @@ public class Driver : User
           Console.WriteLine("| {0,-1} | {1,-43} |", "Nº Licensia          |", $"{driver.LicenseNumber}");
           Console.WriteLine("| {0,-1} | {1,-43} |", "Categoría de Licencia |", $"{driver.LicenseCategory}");
           Console.WriteLine("| {0,-1} | {1,-43} |", "Experiencia en Conducir |", $"{driver.DrivingExperience} años");
+          driver.ShowAge();
           Console.WriteLine("============================================================================");
           Thread.Sleep(3000);
       }

@@ -50,28 +50,26 @@ public class User
             Console.WriteLine("============================================================================");
     }
 
+    //ShowAge()void
+    //volver el metodo showAge() publico para poderlo usar en otros archivos
 
-    //CalculateAge()int
-    public int CalculateAge()
+   int age = 0;
+    protected int CalculateAge(int age)
     {
-        int age = DateTime.Today.Year - BirthDate.Year;
-        int month = DateTime.Today.Month - BirthDate.Month;
-        if (month < 0 || (month == 0 && DateTime.Today.Day < BirthDate.Day))
+        age = DateTime.Today.Year - BirthDate.Year;
+        int monthDiff = DateTime.Today.Month - BirthDate.Month;
+        if (monthDiff < 0 || (monthDiff == 0 && DateTime.Today.Day < BirthDate.Day))
         {
             age--;
         }
         return age;
     }
-
-
-    //ShowAge()void
-    public void ShowAge()
+    protected void ShowAge()
     {
-        int age = CalculateAge();
-        Console.WriteLine("============================================================================");
-        Console.WriteLine("                             INFORMACION DE EDAD                           ");
-        Console.WriteLine("============================================================================");
-        Console.WriteLine($"| {Id,-1} | {age,-43} |                                                   ");
-        Console.WriteLine("============================================================================");
+        Console.WriteLine($"Edad: {CalculateAge(age)}");
     }
+   
+
+    
+    
 }
