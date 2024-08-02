@@ -18,8 +18,13 @@ public static class Administrador
             Console.WriteLine("============================================");
             Console.WriteLine("| 1. Mostrar Detalles de Usuario            |");
             Console.WriteLine("| 2. Añadir Experiencia                     |");
-            Console.WriteLine("| 3. Gestionar Clientes                     |");
-            Console.WriteLine("| 4. Salir                                  |");
+            Console.WriteLine("| 3. Actualizar Categoria de la Licencia    |");
+            Console.WriteLine("| 4. Mostrar Experiencia                     |");
+            Console.WriteLine("| 5. Mostrar Experiencia                     |");
+            Console.WriteLine("| 6. Mostrar Experiencia                     |");
+            Console.WriteLine("| 7. Mostrar Experiencia                     |");
+            Console.WriteLine("| 8. Salir                                  |");
+            Console.WriteLine("| 9. Salir                                  |");
             Console.WriteLine("============================================");
             Console.Write("Ingrese una opcion: ");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -29,11 +34,10 @@ public static class Administrador
                 Driver.ShowDetails();                        
                     break;
                 case 2:
-                
-                    
+                Driver.AddDrivingExperience();
                     break;
                 case 3:
-                    
+                Driver.UpdateLicenseCategory();
                     break;
                 case 4:
                    

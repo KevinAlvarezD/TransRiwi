@@ -32,7 +32,26 @@ public class Driver : User
     };
     
     //metodos
-    public void UpdateLicenseCategory(string newCategory){}
+    public static void UpdateLicenseCategory(){
+        //Pedir al usuario el nombre del driver para cambiar su categoría de licencia
+        //especificar la nueva categoría
+
+        Console.WriteLine("Ingrese el nombre del conductor para cambiar su categoría de licencia: ");
+        string driverName = Console.ReadLine();
+        var driver = drivers.FirstOrDefault(d => d.Name.ToLower() == driverName.ToLower());
+        if (driver!= null)
+        {
+            Console.WriteLine("Ingrese la nueva categoría de licencia: ");
+            string newCategory = Console.ReadLine();
+            driver.LicenseCategory = newCategory;
+            Console.WriteLine($"La categoría de licencia del conductor {driver.Name} ha sido cambiada a {driver.LicenseCategory}.");
+        }
+        else
+        {
+            Console.WriteLine("No se encontro al conductor.");
+        }
+        Thread.Sleep(4000);
+    }
    
     public static void AddDrivingExperience(){
         //Pedir al usuario el nombre del driver para aumentar sus años de experiencia
@@ -52,7 +71,7 @@ public class Driver : User
         {
             Console.WriteLine("No se encontro al conductor.");
         }
-  
+        Thread.Sleep(4000);
     }
    
 
