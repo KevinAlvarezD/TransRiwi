@@ -12,11 +12,11 @@ public class Driver : User
     public int DrivingExperience { get; set; }
 
     //constructor
-  /*   public Driver(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string adreess, string licenseNumber, string licenseCategory, int drivingExperience) : base(name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber, adreess)
+    public Driver(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string adreess, string licenseNumber, string licenseCategory, int drivingExperience) : base(name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber, adreess)
     {
         LicenseNumber = licenseNumber;
         LicenseCategory = licenseCategory;
         DrivingExperience = drivingExperience;
-    } */
+    }
 
 }
