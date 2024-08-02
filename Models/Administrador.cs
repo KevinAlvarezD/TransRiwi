@@ -25,6 +25,7 @@ public static class Administrador
             Console.WriteLine("| 7. Clientes mayores de 30                    |");
             Console.WriteLine("| 8. Conductores ordenados de forma descendente|");
             Console.WriteLine("| 9. Clientes que paga con tarjeta de credito  |");
+            Console.WriteLine("| 10. Conductores con licencia A2              |");
             Console.WriteLine("| 10. Salir                                     |");
             Console.WriteLine("================================================");
             Console.Write("Ingrese una opcion: ");
@@ -57,8 +58,11 @@ public static class Administrador
                      break;  
                 case 9:
                 Customer.GetCustomersWithCreditCardPayment();
-                break;      
+                break;
                 case 10:
+                Driver.ListLicenseCategoryA2();
+                break;      
+                case 11:
                      Console.WriteLine("Gracias por usar nuestro sistema. Adiós...");
                      Thread.Sleep(3000);
                      Environment.Exit(0);
