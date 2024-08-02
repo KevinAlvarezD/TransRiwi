@@ -33,6 +33,5 @@ public class User
     //metodos
     //showDetails()void
     //CalculateAge()int
-    
     //ShowAge()void
 }
